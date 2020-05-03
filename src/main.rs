@@ -10,20 +10,8 @@
 // use std::env;
 use clap::{App, Arg, SubCommand};
 
-fn help() {
-    println!("This is the mobbit help menu.");
-}
-
 fn start(minutes: u8) {
     println!("Mobbit started! Turns will be {} minutes long.", minutes);
-}
-
-fn next() {
-    println!("Next driver!");
-}
-
-fn done() {
-    println!("Mobbit stopped.");
 }
 
 fn main() {
