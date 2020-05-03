@@ -20,8 +20,8 @@ fn main() {
         .get_matches();
     
     if let Some(matches) = matches.subcommand_matches("start") {
-        let minutes: u8 = matches.value_of("minutes").unwrap().parse().unwrap();
-        let turn = Turn::new(minutes);
+        let minutes: u64 = matches.value_of("minutes").unwrap().parse().unwrap();
+        let mut turn = Turn::new(minutes);
         turn.start();
     }
 
