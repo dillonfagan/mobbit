@@ -1,13 +1,3 @@
-// mob start [time]
-// creates branch mob-session and pulls from origin/mob-session
-
-// mob next
-// pushes all changes to origin/mob-session
-
-// mob done
-// squashes all changes in origin/mob-session into a new branch (name provided)
-
-// use std::env;
 use clap::{App, Arg, SubCommand};
 
 fn start(minutes: u8) {
