@@ -1,8 +1,5 @@
 use clap::{App, Arg, SubCommand};
-
-fn start(minutes: u8) {
-    println!("Mobbit started! Turns will be {} minutes long.", minutes);
-}
+use mobbit::Turn;
 
 fn main() {
     let matches = App::new("mobbit")
@@ -24,7 +21,8 @@ fn main() {
     
     if let Some(matches) = matches.subcommand_matches("start") {
         let minutes: u8 = matches.value_of("minutes").unwrap().parse().unwrap();
-        start(minutes);
+        let turn = Turn::new(minutes);
+        turn.start();
     }
 
     println!("Mobbit has stopped.");
