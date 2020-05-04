@@ -24,6 +24,4 @@ fn main() {
         let turn = Turn::new(minutes);
         turn.start();
     }
-
-    println!("Mobbit has stopped.");
 }
