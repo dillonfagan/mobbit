@@ -2,6 +2,12 @@
 name = "mobbit"
 version = "0.1.0"
 authors = ["Dillon Fagan <dillonfagan@pm.me>"]
+homepage = "https://github.com/dillonfagan/mobbit"
+repository = "https://github.com/dillonfagan/mobbit"
+readme = "README.md"
+license = "GPL-3.0-only"
+keywords = ["mob", "mobbing", "cli"]
+categories = ["command-line-utilities", "development-tools"]
 edition = "2018"
 
 [dependencies]
