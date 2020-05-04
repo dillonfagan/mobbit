@@ -1,5 +1,6 @@
 use std::time::Duration;
 use std::thread;
+use console::style;
 
 pub struct Turn {
     minutes: u64,
@@ -15,8 +16,8 @@ impl Turn {
     }
 
     pub fn start(&self) {
-        println!("Your turn started. {} minutes remaining.", self.minutes);
+        println!("{} {} minutes remaining...", style("Turn started").green(), self.minutes);
         thread::sleep(self.duration);
-        println!("Your turn is over. Time to commit!");
+        println!("{} Time to commit!", style("Turn finished").green());
     }
 }

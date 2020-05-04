@@ -13,3 +13,4 @@ edition = "2018"
 
 [dependencies]
 clap = "2.33.0"
+console = "0.11.2"
