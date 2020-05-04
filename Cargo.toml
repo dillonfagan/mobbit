@@ -1,5 +1,6 @@
 [package]
 name = "mobbit"
+description = "A CLI for better mobbing."
 version = "0.1.0"
 authors = ["Dillon Fagan <dillonfagan@pm.me>"]
 homepage = "https://github.com/dillonfagan/mobbit"
