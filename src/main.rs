@@ -3,7 +3,7 @@ use mobbit::Turn;
 
 fn main() {
     let matches = App::new("mobbit")
-        .version("0.1.0")
+        .version("0.1.1")
         .about("The cool way to mob.")
         .author("Dillon Fagan")
         .subcommand(
@@ -24,6 +24,4 @@ fn main() {
         let turn = Turn::new(minutes);
         turn.start();
     }
-
-    println!("Mobbit has stopped.");
 }
