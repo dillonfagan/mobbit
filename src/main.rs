@@ -21,7 +21,7 @@ fn main() {
     
     if let Some(matches) = matches.subcommand_matches("start") {
         let minutes: u64 = matches.value_of("minutes").unwrap().parse().unwrap();
-        let mut turn = Turn::new(minutes);
+        let turn = Turn::new(minutes);
         turn.start();
     }
 

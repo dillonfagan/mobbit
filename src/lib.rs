@@ -1,10 +1,9 @@
 use std::time::Duration;
-use stopwatch::Stopwatch;
+use std::thread;
 
 pub struct Turn {
     minutes: u64,
     duration: Duration,
-    stopwatch: Stopwatch,
 }
 
 impl Turn {
@@ -12,12 +11,12 @@ impl Turn {
         Turn {
             minutes: minutes,
             duration: Duration::from_secs(minutes * 60),
-            stopwatch: Stopwatch::new(),
         }
     }
 
-    pub fn start(&mut self) {
-        self.stopwatch.start();
-        println!("Turn started. {} minutes remaining.", self.minutes);
+    pub fn start(&self) {
+        println!("Your turn started. {} minutes remaining.", self.minutes);
+        thread::sleep(self.duration);
+        println!("Your turn is over. Time to commit!");
     }
 }
