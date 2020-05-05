@@ -32,6 +32,10 @@ impl Turn {
             if seconds >= 300 && i == seconds - 120 {
                 bar.set_message("2 minutes remaining...");
             }
+
+            if i == seconds - 60 {
+                bar.set_message("1 minute remaining...");
+            }
         }
 
         bar.finish();
