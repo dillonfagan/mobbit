@@ -25,9 +25,13 @@ impl Turn {
             .template("[{eta_precise}] {bar:50.cyan/blue} {msg}")
             .progress_chars("== "));
 
-        for _ in 0..seconds {
+        for i in 0..seconds {
             thread::sleep(Duration::from_secs(1));
             bar.inc(1);
+
+            if seconds >= 300 && i == seconds - 120 {
+                bar.set_message("2 minutes remaining...");
+            }
         }
 
         bar.finish();
