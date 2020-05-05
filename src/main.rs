@@ -3,7 +3,7 @@ use mobbit::Turn;
 
 fn main() {
     let matches = App::new("mobbit")
-        .version("0.1.1")
+        .version("0.2.0")
         .about("The cool way to mob.")
         .author("Dillon Fagan")
         .subcommand(
